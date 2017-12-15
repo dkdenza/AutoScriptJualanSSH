@@ -81,7 +81,7 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget -O /usr/bin/screenfetch "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/screenfetch"
+wget -O /usr/bin/screenfetch "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/screenfetch"
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
@@ -131,7 +131,7 @@ http {
 }
 END3
 mkdir -p /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/index.html"
+wget -O /home/vps/public_html/index.html "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/index.html"
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 args='$args'
 uri='$uri'
@@ -309,17 +309,17 @@ mkdir /var/lib/premium-script
 /etc/init.d/pptpd restart
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/snmpd.conf"
+wget -O /root/mrtg-mem.sh "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -327,7 +327,7 @@ service snmpd restart
 snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
 mkdir -p /home/vps/public_html/mrtg
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/mrtg.conf" >> /etc/mrtg.cfg
+curl "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/mrtg.conf" >> /etc/mrtg.cfg
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
 indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
@@ -353,7 +353,7 @@ service dropbear restart
 #Upgrade to Dropbear 2016
 cd
 apt-get install zlib1g-dev
-wget https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/dropbear/dropbear-2016.74.tar.bz2
+wget https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/dropbear/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
 ./configure
@@ -365,7 +365,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/vnstat_php_frontend-1.5.1.tar.gz
+wget https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -419,7 +419,7 @@ service squid3 restart
 
 # install webmin
 cd
-wget "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/webmin_1.801_all.deb"
+wget "https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/webmin_1.801_all.deb"
 dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -460,7 +460,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://github.com/jkjknm123/AutoScriptJualanSSH/raw/master/repo/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalisasi
 apt-get -y autoremove
@@ -484,22 +484,22 @@ history -c
 # info
 clear
 echo " "
-echo "Instaslasi telah selesai! Mohon baca dan simpan penjelasan setup server!"
+echo "                            ติดตั้งแล้วพร้อมใช้งานครับ"
 echo " "
-echo "--------------------------- Penjelasan Setup Server ----------------------------"
-echo "                         Copyright HostingTermurah.net                          "
-echo "                        https://www.hostingtermurah.net                         "
-echo "               Created By Steven Indarto(fb.com/stevenindarto2)                 "
+echo "---------------------------  Setup Server -------------------------------------"
+echo "                         Copyright VPN-THAI                                    "
+echo "                        https://www.vpn-thai.com                               "
+echo "                       Created By PANUPONG NIYAKIT                             "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
-echo "Informasi Server"  | tee -a log-install.txt
+echo "ข้อมูล Server"  | tee -a log-install.txt
 echo "   - Timezone    : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban    : [on]"  | tee -a log-install.txt
 echo "   - IPtables    : [on]"  | tee -a log-install.txt
 echo "   - Auto-Reboot : [off]"  | tee -a log-install.txt
 echo "   - IPv6        : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Informasi Aplikasi & Port"  | tee -a log-install.txt
+echo "ข้อมูล Aplikasi & Port"  | tee -a log-install.txt
 echo "   - OpenVPN     : TCP 1194 "  | tee -a log-install.txt
 echo "   - OpenSSH     : 22, 143"  | tee -a log-install.txt
 echo "   - Dropbear    : 109, 110, 443"  | tee -a log-install.txt
@@ -508,20 +508,18 @@ echo "   - Badvpn      : 7300"  | tee -a log-install.txt
 echo "   - Nginx       : 85"  | tee -a log-install.txt
 echo "   - PPTP VPN    : 1732"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Informasi Tools Dalam Server"  | tee -a log-install.txt
+echo "ข้อมูล Tools Dalam Server"  | tee -a log-install.txt
 echo "   - htop"  | tee -a log-install.txt
 echo "   - iftop"  | tee -a log-install.txt
 echo "   - mtr"  | tee -a log-install.txt
 echo "   - nethogs"  | tee -a log-install.txt
 echo "   - screenfetch"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Informasi Premium Script"  | tee -a log-install.txt
-echo "   Perintah untuk menampilkan daftar perintah: menu"  | tee -a log-install.txt
+echo "ข้อมูล Premium Script การใช้งาน"  | tee -a log-install.txt
+echo "   พิมพ์: menu เพื่อใช้งาน"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   Penjelasan script dan setup VPS"| tee -a log-install.txt
-echo "   dapat dilihat di: http://bit.ly/penjelasansetup"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Informasi Penting"  | tee -a log-install.txt
+echo "ข้อมูล Penting"  | tee -a log-install.txt
 echo "   - Download Config OpenVPN : http://$MYIP:85/client.ovpn"  | tee -a log-install.txt
 echo "     Mirror (*.tar.gz)       : http://$MYIP:85/openvpn.tar.gz"  | tee -a log-install.txt
 echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
@@ -530,4 +528,4 @@ echo "   - MRTG                    : http://$MYIP:85/mrtg/"  | tee -a log-instal
 echo "   - Log Instalasi           : cat /root/log-install.txt"  | tee -a log-install.txt
 echo "     NB: User & Password Webmin adalah sama dengan user & password root"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "----------- Script Created By Steven Indarto(fb.com/stevenindarto2) ------------"
+echo "----------- Script Created By PANUPONG ------------"
