@@ -260,8 +260,8 @@ cd /etc/openvpn/
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
 cat > /home/vps/public_html/client.ovpn <<-END
-# OpenVPN Configuration Dibuat Oleh HostingTermurah.net
-# (Official Partner VPS-Murah.net)
+# OpenVPN Configuration By Vpn-thai.com
+# (Official VPN-THAI.COM)
 client
 proto tcp
 persist-key
@@ -279,7 +279,9 @@ script-security 2
 route 0.0.0.0 0.0.0.0
 route-method exe
 route-delay 2
-remote $MYIP 1194
+http-proxy-retry
+http-proxy $MYIP 8080
+remote $MYIP:1194@lvs.truehits.in.th
 cipher AES-128-CBC
 END
 echo '<ca>' >> /home/vps/public_html/client.ovpn
