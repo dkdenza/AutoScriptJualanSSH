@@ -19,9 +19,53 @@ cat > /root/limit.sh <<END3
 END3
 
 cd /usr/local/bin
-wget -O premium-script.tar.gz "https://github.com/AnonSecID7IlhamAhmadDevTeam/AutoScriptJualanSSH/raw/master/masterscript/premium-script.tar.gz"
-tar -xvf premium-script.tar.gz
-rm -f premium-script.tar.gz
+wget  "https://jkjknm03x.000webhostapp.com/alluser-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-limit"
+wget  "https://jkjknm03x.000webhostapp.com/user-expire"
+wget  "https://jkjknm03x.000webhostapp.com/user-detail"
+wget  "https://jkjknm03x.000webhostapp.com/user-delete"
+wget  "https://jkjknm03x.000webhostapp.com/user-ban"
+wget  "https://jkjknm03x.000webhostapp.com/user-aktif"
+wget  "https://jkjknm03x.000webhostapp.com/user-add"
+wget  "https://jkjknm03x.000webhostapp.com/trial"
+wget  "https://jkjknm03x.000webhostapp.com/user-generate"
+wget  "https://jkjknm03x.000webhostapp.com/pengumuman"
+wget  "https://jkjknm03x.000webhostapp.com/listpassword"
+wget  "https://jkjknm03x.000webhostapp.com/log-ban"
+wget  "https://jkjknm03x.000webhostapp.com/log-limit"
+wget  "https://jkjknm03x.000webhostapp.com/ram"
+wget  "https://jkjknm03x.000webhostapp.com/speedtest"
+wget  "https://jkjknm03x.000webhostapp.com/bench-network"
+wget  "https://jkjknm03x.000webhostapp.com/user-detail-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-expire-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-login-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/alluser-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-delete-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/alluser-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-add-pptp"
+wget  "https://jkjknm03x.000webhostapp.com/user-log"
+wget  "https://jkjknm03x.000webhostapp.com/user-password"
+wget  "https://jkjknm03x.000webhostapp.com/user-unlock"
+wget  "https://jkjknm03x.000webhostapp.com/user-unban"
+wget  "https://jkjknm03x.000webhostapp.com/user-login"
+wget  "https://jkjknm03x.000webhostapp.com/user-lock"
+wget  "https://jkjknm03x.000webhostapp.com/diagnosa"
+wget  "https://jkjknm03x.000webhostapp.com/premium-script"
+wget  "https://jkjknm03x.000webhostapp.com/user-delete-expired"
+wget  "https://jkjknm03x.000webhostapp.com/auto-reboot"
+wget  "https://jkjknm03x.000webhostapp.com/log-install"
+wget  "https://jkjknm03x.000webhostapp.com/menu"
+wget  "https://jkjknm03x.000webhostapp.com/user-auto-limit"
+wget  "https://jkjknm03x.000webhostapp.com/user-list"
+wget  "https://jkjknm03x.000webhostapp.com/user-auto-limit-script"
+wget  "https://jkjknm03x.000webhostapp.com/edit-port"
+wget  "https://jkjknm03x.000webhostapp.com/edit-port-squid"
+wget  "https://jkjknm03x.000webhostapp.com/edit-port-openvpn"
+wget  "https://jkjknm03x.000webhostapp.com/edit-port-openssh"
+wget  "https://jkjknm03x.000webhostapp.com/edit-port-dropbear"
+wget  "https://jkjknm03x.000webhostapp.com/autokill"
+
+
 
 cp /usr/local/bin/premium-script /usr/local/bin/menu
 
